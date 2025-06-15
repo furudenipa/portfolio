@@ -1,0 +1,210 @@
+baseURL: "https://example.com"
+languageCode: "jp"
+title: "furudenipa"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: false
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "Hugo Profile"
+  description: Text about my cool site
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/images/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    defaultTheme: "dark"
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "furudenipa" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # About
+  about:
+    enable: true
+    title: "furudenipa"
+    image: "/images/me.png"
+    content: |-
+      現在、京大情報学研究科の修士課程に在籍しており、SWEを志望しています。インフラやバックエンドの開発に興味があります。
+
+      最近はおうちk8sやProxmoxに手を出しています。
+    skills:
+      enable: true
+      title: "興味のある技術スタック: "
+      items:
+        - "Python"
+        - "Golang"
+        - "Docker"
+        - "Kubernetes"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "バックエンドエンジニア"
+        company: "某ベンチャー"
+        companyUrl: ""
+        date: "2023 - 2025"
+        featuredLink:
+          enable: false
+          name: "View the project"
+        content: "京都にある某ベンチャー企業でバックエンドエンジニアとして働いていました。PythonのFastAPIを使った開発を行い、データベースはPostgreSQLを使用していました。"
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "修士課程"
+        school:
+          name: "京都大学大学院情報学研究科"
+          url: "https://www.i.kyoto-u.ac.jp"
+        date: "2025 - 2027"
+        # GPA: "3.9 out of 5.0"
+        content: |-
+          学会発表
+            - 2025 合意と共創研究会「」
+            - 2025 人工知能学会「」
+      - title: "学部"
+        school:
+          name: "京都大学法学部"
+          url: "https://law.kyoto-u.ac.jp"
+        date: "2021 - 2024"
+        content: |-
+          課外活動
+            - ディベート
+              - 2021 CoDA 全日本大学ディベート選手権大会 3位
+              - 2021 inochi Gakusei Innovators' Program 運営
+              - 2022 CDS 納涼杯 3位など
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: arxiv-go
+        content: "arXiv API wrapper written in Go."
+        image: /images/arxiv-api.png
+        featured:
+          name: Link
+          link: https://github.com/furudenipa/arxiv-go
+        badges:
+          - "Go"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/furudenipa/arxiv-go
+
+      - title: HLS Radio Server
+        content: 自宅鯖のk8sクラスタ上で動作しているHLS radio serverです。ArgoCDによるCICDパイプラインを構築しています。
+        image: /images/radio.png
+        featured:
+          name: Link
+          link: https://github.com/furudenipa/arxiv-go
+        badges:
+          - "Go"
+          - "GitHub Actions"
+          - "Kubernetes"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/furudenipa/arxiv-go
+
+      - title: k8s setup
+        content: 自宅kubernetesのセットアップ手順をまとめたAnsibleのプレイブックです。
+        image: /images/setup.png
+        featured:
+          name: Link
+          link: https://hugo-profile-2.netlify.app
+        badges:
+          - "Ansible"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
+
+  footer:
+    socialNetworks:
+      github: https://github.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
