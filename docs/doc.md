@@ -56,4 +56,9 @@
 
 ### 画面設計図
 
+![portfolio image](https://github.com/furudenipa/portfolio/blob/main/docs/images/portfolio-image.svg)
+
+
 ### インフラ設計図
+
+![system configuration diagram](https://github.com/furudenipa/portfolio/blob/main/docs/images/configuration.svg)
