@@ -80,7 +80,9 @@ params:
     title: "furudenipa"
     image: "/images/me.png"
     content: |-
-      現在、京大情報学研究科の修士課程に在籍しており、SWEを志望しています。インフラやバックエンドの開発に興味があります。
+      現在、京大情報学研究科の修士課程に在籍
+      
+      インフラやバックエンドの開発に興味があります。
 
       最近はおうちk8sやProxmoxに手を出しています。
     skills:
@@ -120,13 +122,13 @@ params:
         # GPA: "3.9 out of 5.0"
         content: |-
           学会発表
-            - 2025 合意と共創研究会「」
-            - 2025 人工知能学会「」
+            - 2025 合意と共創研究会（学生優秀発表賞 受賞）
+            - 2025 人工知能学会
       - title: "学部"
         school:
           name: "京都大学法学部"
           url: "https://law.kyoto-u.ac.jp"
-        date: "2021 - 2024"
+        date: "2021 - 2025"
         content: |-
           課外活動
             - ディベート
@@ -156,30 +158,30 @@ params:
         image: /images/radio.png
         featured:
           name: Link
-          link: https://github.com/furudenipa/arxiv-go
+          link: https://github.com/furudenipa/hls-radio-server
         badges:
           - "Go"
           - "GitHub Actions"
           - "Kubernetes"
         links:
           - icon: fab fa-github
-            url: https://github.com/furudenipa/arxiv-go
+            url: https://github.com/furudenipa/hls-radio-server
 
       - title: k8s setup
         content: 自宅kubernetesのセットアップ手順をまとめたAnsibleのプレイブックです。
         image: /images/setup.png
         featured:
           name: Link
-          link: https://hugo-profile-2.netlify.app
+          link: https://github.com/furudenipa/k8s-setup
         badges:
           - "Ansible"
         links:
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
+            url: https://github.com/furudenipa/k8s-setup
 
   footer:
     socialNetworks:
-      github: https://github.com
+      github: https://github.com/furudenipa
 
   # List pages like blogs and posts
   listPages:
