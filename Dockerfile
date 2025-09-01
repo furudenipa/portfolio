@@ -3,8 +3,7 @@ WORKDIR /src
 
 COPY . .
 ENV HUGO_ENV=production
-ARG HUGO_BASEURL="https://portfolio.furudenipa.org"
-RUN hugo --minify --baseURL "${HUGO_BASEURL}"
+RUN hugo --minify 
 
 FROM nginxinc/nginx-unprivileged:alpine
 COPY --chown=101:101 --from=build /src/public /usr/share/nginx/html
