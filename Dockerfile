@@ -1,4 +1,4 @@
-FROM hugomods/hugo:exts-non-root-0.149.0 AS build
+FROM hugomods/hugo:std-0.149.0 AS build
 WORKDIR /src
 
 COPY . .
