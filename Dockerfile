@@ -1,4 +1,4 @@
-FROM klakegg/hugo:0.101.0-ext-alpine AS build
+FROM hugomods/hugo:exts-non-root-0.149.0 AS build
 WORKDIR /src
 
 COPY . .
